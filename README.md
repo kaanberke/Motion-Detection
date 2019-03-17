@@ -1,11 +1,16 @@
 ### Motion Detection
-2
 A motion detection project which was developed by using selenium and opencv.
-3
-​
+
 ## How to install?
 ```
 git clone https://github.com/kaanberke/Motion-Detection.git
+```
+
+You need to download 'chromedriver.exe' into the folder you cloned
+inorder to use selenium.
+There is a source you can download: 
+```
+chromedriver.chromium.org
 ```
 
 ## How to use?
