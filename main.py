@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from selenium import webdriver
-import winsound
+#import winsound
 
 driver = webdriver.Chrome()
 driver.get('https://web.whatsapp.com/')
@@ -35,7 +35,7 @@ while True:
     #foreground mask
     fg_mask = bg_sub.apply(resizedFrame)
 
-    count = np.count_nonzero(fgmask)
+    count = np.count_nonzero(fg_mask)
 
     print(f'Frame: {frameCount}, Pixel count: {count}')
 
@@ -48,7 +48,7 @@ while True:
         # winsound.Beep() # CAN BE ADDED winsound beep 
 
     cv2.imshow('FRAME', resizedFrame)
-    cv2.imshow('MASK', fgmask)
+    cv2.imshow('MASK', fg_mask)
 
     k = cv2.waitKey(20) & 0xFF
     if k == ord('q'):
